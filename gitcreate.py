@@ -39,7 +39,6 @@ current_path = subprocess.check_output('pwd', shell = True)
 try:
     access_token = os.environ['github_access_token']    
 except Exception, e:
-    print(e)
     access_token = None
 else:
     pass
