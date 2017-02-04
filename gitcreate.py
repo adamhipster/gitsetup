@@ -36,7 +36,6 @@ def debug(text):
 
 #Settings
 current_path = subprocess.check_output('pwd', shell = True)
-acces_token = None
 try:
     access_token = os.environ['github_access_token']    
 except Exception, e:
