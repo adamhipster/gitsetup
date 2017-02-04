@@ -39,12 +39,8 @@ current_path = subprocess.check_output('pwd', shell = True)
 try:
     access_token = os.environ['github_access_token']    
 except Exception, e:
+    # debug('Exception thrown by setting current_path' + e)
     access_token = None
-else:
-    pass
-finally:
-    pass
-
 user = removeNewline(subprocess.check_output('git config user.name', shell = True))
 repo = removeNewline(ntpath.basename(current_path))
 
